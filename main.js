@@ -97,7 +97,7 @@ async function startSpamming() {
         }
 
         await channel.send(spamMessage);
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Adjust the delay as needed
+        await new Promise(resolve => setTimeout(resolve, 100)); 
     }
 }
 
@@ -109,7 +109,7 @@ function getRandomEmojis() {
 function getRandomLetters() {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     let randomString = '';
-    for (let i = 0; i < 5; i++) { // Adjust length as needed
+    for (let i = 0; i < 5; i++) {
         randomString += letters.charAt(Math.floor(Math.random() * letters.length));
     }
     return randomString;
